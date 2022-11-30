@@ -1,33 +1,33 @@
 ﻿namespace LTWindows
 {
-	partial class MainView
-	{
-		/// <summary>
-		///  Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class MainView
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		///  Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		///  Required method for Designer support - do not modify
-		///  the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBai14 = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.btnBai3 = new System.Windows.Forms.Button();
             this.btnBai2 = new System.Windows.Forms.Button();
             this.btnBai1 = new System.Windows.Forms.Button();
+            this.btnBai14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,8 +59,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btnBai14);
@@ -80,7 +81,7 @@
             // 
             // btnBai14
             // 
-            this.btnBai14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai14.Location = new System.Drawing.Point(461, 218);
             this.btnBai14.Name = "btnBai14";
@@ -92,7 +93,7 @@
             // 
             // btnBai13
             // 
-            this.btnBai13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai13.Location = new System.Drawing.Point(461, 183);
             this.btnBai13.Name = "btnBai13";
@@ -104,7 +105,7 @@
             // 
             // btnBai12
             // 
-            this.btnBai12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai12.Location = new System.Drawing.Point(461, 148);
             this.btnBai12.Name = "btnBai12";
@@ -116,7 +117,7 @@
             // 
             // btnBai10
             // 
-            this.btnBai10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai10.Location = new System.Drawing.Point(461, 113);
             this.btnBai10.Name = "btnBai10";
@@ -128,7 +129,7 @@
             // 
             // btnBai8
             // 
-            this.btnBai8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai8.Location = new System.Drawing.Point(461, 78);
             this.btnBai8.Name = "btnBai8";
@@ -140,7 +141,7 @@
             // 
             // btnBai7
             // 
-            this.btnBai7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai7.Location = new System.Drawing.Point(461, 43);
             this.btnBai7.Name = "btnBai7";
@@ -152,7 +153,7 @@
             // 
             // btnBai6
             // 
-            this.btnBai6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai6.Location = new System.Drawing.Point(88, 183);
             this.btnBai6.Name = "btnBai6";
@@ -164,7 +165,7 @@
             // 
             // btnBai4
             // 
-            this.btnBai4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai4.Location = new System.Drawing.Point(88, 148);
             this.btnBai4.Name = "btnBai4";
@@ -176,7 +177,7 @@
             // 
             // btnBai3
             // 
-            this.btnBai3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai3.Location = new System.Drawing.Point(88, 113);
             this.btnBai3.Name = "btnBai3";
@@ -188,7 +189,7 @@
             // 
             // btnBai2
             // 
-            this.btnBai2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai2.Location = new System.Drawing.Point(88, 78);
             this.btnBai2.Name = "btnBai2";
@@ -200,7 +201,7 @@
             // 
             // btnBai1
             // 
-            this.btnBai1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnBai1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBai1.Location = new System.Drawing.Point(88, 43);
             this.btnBai1.Name = "btnBai1";
@@ -223,21 +224,21 @@
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
-		private Label label1;
-		private Panel panel1;
-		private Button btnBai13;
-		private Button btnBai12;
-		private Button btnBai10;
-		private Button btnBai8;
-		private Button btnBai7;
-		private Button btnBai6;
-		private Button btnBai4;
-		private Button btnBai3;
-		private Button btnBai2;
-		private Button btnBai1;
+        #endregion
+        private Label label1;
+        private Panel panel1;
+        private Button btnBai13;
+        private Button btnBai12;
+        private Button btnBai10;
+        private Button btnBai8;
+        private Button btnBai7;
+        private Button btnBai6;
+        private Button btnBai4;
+        private Button btnBai3;
+        private Button btnBai2;
+        private Button btnBai1;
         private Button btnBai14;
     }
 }

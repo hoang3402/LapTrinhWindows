@@ -1,33 +1,33 @@
 ﻿namespace LTWindows
 {
-	partial class Bai13
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class Bai13
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.tabControlViewMatrix = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnTotal = new System.Windows.Forms.Button();
@@ -45,8 +45,8 @@
             // 
             // tabControlViewMatrix
             // 
-            this.tabControlViewMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControlViewMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlViewMatrix.Controls.Add(this.tabPage1);
             this.tabControlViewMatrix.Controls.Add(this.tabPage2);
@@ -161,20 +161,20 @@
             this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private TabControl tabControlViewMatrix;
-		private TabPage tabPage1;
-		private CheckBox checkBoxMatrixSquare;
-		private TextBox txtbCot;
-		private Button btnCreateMatrix;
-		private TabPage tabPage2;
-		private Label label2;
-		private Label label1;
-		private TextBox txtbDong;
-		private System.ComponentModel.BackgroundWorker backgroundWorker1;
-		private Button btnTotal;
-	}
+        private TabControl tabControlViewMatrix;
+        private TabPage tabPage1;
+        private CheckBox checkBoxMatrixSquare;
+        private TextBox txtbCot;
+        private Button btnCreateMatrix;
+        private TabPage tabPage2;
+        private Label label2;
+        private Label label1;
+        private TextBox txtbDong;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button btnTotal;
+    }
 }
