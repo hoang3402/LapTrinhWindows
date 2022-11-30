@@ -1,6 +1,6 @@
 ﻿using LTWindows.Core;
 
-namespace LTWindows.MyForms
+namespace LTWindows
 {
     public partial class Bai14 : Form
     {
@@ -119,6 +119,11 @@ namespace LTWindows.MyForms
 
         private void btnMultiplication_Click(object sender, EventArgs e)
         {
+            if (a is null)
+            {
+                MessageBox.Show("Ma trận hiện tại đang rỗng!");
+                return;
+            }
             Matrix temp = a.Multiplication(a, b);
             if (temp != null)
             {
