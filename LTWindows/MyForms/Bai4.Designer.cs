@@ -1,6 +1,6 @@
 ﻿namespace LTWindows
 {
-	partial class Bai6
+	partial class Bai4
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -145,8 +145,8 @@
 			this.Controls.Add(this.listBox2);
 			this.Name = "Bai6";
 			this.Text = "Bài 6 In ra màn hình bảng cửu chương";
-			this.Activated += new System.EventHandler(this.Bai6_Activated);
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bai6_FormClosing);
+			this.Activated += new System.EventHandler(this.Bai4_Activated);
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bai4_FormClosing);
 			this.ResumeLayout(false);
 
 		}
