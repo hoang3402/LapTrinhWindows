@@ -23,6 +23,12 @@ namespace LTWindows
 
         private void btnCreateMatrix_Click(object sender, EventArgs e)
         {
+            if (this.txtbCot.Text == string.Empty || this.txtbDong.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!");
+                return;
+            }
+
             int SoDong;
             int SoCot;
 
@@ -64,11 +70,19 @@ namespace LTWindows
 
         private void ChangeData(object sender, EventArgs e)
         {
-            string[] temp = ((TextBox)sender).Name.Split(" ");
-            int SoDong = int.Parse(temp[0]);
-            int SoCot = int.Parse(temp[1]);
+            try
+            {
+                string[] temp = ((TextBox)sender).Name.Split(" ");
+                int SoDong = int.Parse(temp[0]);
+                int SoCot = int.Parse(temp[1]);
 
-            a.matrix[SoDong, SoCot] = int.Parse(((TextBox)sender).Text);
+                a.matrix[SoDong, SoCot] = int.Parse(((TextBox)sender).Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+
         }
 
         private void checkBoxMatrixSquare_CheckedChanged(object sender, EventArgs e)
@@ -105,6 +119,16 @@ namespace LTWindows
                 return true;
             }
             return false;
+        }
+
+        private void btnTamGiacTren_Click(object sender, EventArgs e)
+        {
+            if (CheckNull())
+            {
+                MessageBox.Show("Bạn chưa nhập ma trận!");
+                return;
+            }
+            MessageBox.Show(Matrix.isUpperTriangular(a).ToString());
         }
     }
 }

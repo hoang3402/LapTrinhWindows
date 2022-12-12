@@ -77,7 +77,7 @@
 			if (a.SoCot != b.SoCot || a.SoDong != b.SoDong)
 			{
 				MessageBox.Show("Không tính được!");
-                return null;
+				return null;
 			}
 
 			Matrix result = new(a.SoCot, a.SoDong);
@@ -91,6 +91,22 @@
 			}
 
 			return result;
+		}
+
+
+		public static bool isUpperTriangular(Matrix a)
+		{
+			if (!a.isSquare) return false;
+
+			for (int i = 0; i < a.SoDong; i++)
+			{
+				for (int j = i + 1; j < a.SoCot; j++)
+				{
+					if (a.matrix[i, j] != 0) return false;
+				}
+			}
+
+			return true;
 		}
 
 	}

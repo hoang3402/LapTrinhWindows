@@ -39,14 +39,15 @@
             this.btnCreateMatrix = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnTamGiacTren = new System.Windows.Forms.Button();
             this.tabControlViewMatrix.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlViewMatrix
             // 
-            this.tabControlViewMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControlViewMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlViewMatrix.Controls.Add(this.tabPage1);
             this.tabControlViewMatrix.Controls.Add(this.tabPage2);
@@ -58,6 +59,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnTamGiacTren);
             this.tabPage1.Controls.Add(this.btnTotal);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -75,9 +77,9 @@
             // 
             // btnTotal
             // 
-            this.btnTotal.Location = new System.Drawing.Point(126, 168);
+            this.btnTotal.Location = new System.Drawing.Point(272, 237);
             this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(138, 29);
+            this.btnTotal.Size = new System.Drawing.Size(204, 29);
             this.btnTotal.TabIndex = 6;
             this.btnTotal.Text = "Tổng đường chéo";
             this.btnTotal.UseVisualStyleBackColor = true;
@@ -86,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 81);
+            this.label2.Location = new System.Drawing.Point(268, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 5;
@@ -95,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 46);
+            this.label1.Location = new System.Drawing.Point(268, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 4;
@@ -103,7 +105,7 @@
             // 
             // txtbDong
             // 
-            this.txtbDong.Location = new System.Drawing.Point(126, 78);
+            this.txtbDong.Location = new System.Drawing.Point(338, 136);
             this.txtbDong.Name = "txtbDong";
             this.txtbDong.Size = new System.Drawing.Size(138, 27);
             this.txtbDong.TabIndex = 3;
@@ -111,7 +113,7 @@
             // checkBoxMatrixSquare
             // 
             this.checkBoxMatrixSquare.AutoSize = true;
-            this.checkBoxMatrixSquare.Location = new System.Drawing.Point(467, 45);
+            this.checkBoxMatrixSquare.Location = new System.Drawing.Point(314, 172);
             this.checkBoxMatrixSquare.Name = "checkBoxMatrixSquare";
             this.checkBoxMatrixSquare.Size = new System.Drawing.Size(127, 24);
             this.checkBoxMatrixSquare.TabIndex = 2;
@@ -121,16 +123,16 @@
             // 
             // txtbCot
             // 
-            this.txtbCot.Location = new System.Drawing.Point(126, 45);
+            this.txtbCot.Location = new System.Drawing.Point(338, 103);
             this.txtbCot.Name = "txtbCot";
             this.txtbCot.Size = new System.Drawing.Size(138, 27);
             this.txtbCot.TabIndex = 1;
             // 
             // btnCreateMatrix
             // 
-            this.btnCreateMatrix.Location = new System.Drawing.Point(126, 133);
+            this.btnCreateMatrix.Location = new System.Drawing.Point(272, 202);
             this.btnCreateMatrix.Name = "btnCreateMatrix";
-            this.btnCreateMatrix.Size = new System.Drawing.Size(138, 29);
+            this.btnCreateMatrix.Size = new System.Drawing.Size(204, 29);
             this.btnCreateMatrix.TabIndex = 0;
             this.btnCreateMatrix.Text = "Tạo ma trận";
             this.btnCreateMatrix.UseVisualStyleBackColor = true;
@@ -146,6 +148,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ma trận";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnTamGiacTren
+            // 
+            this.btnTamGiacTren.Location = new System.Drawing.Point(272, 272);
+            this.btnTamGiacTren.Name = "btnTamGiacTren";
+            this.btnTamGiacTren.Size = new System.Drawing.Size(204, 29);
+            this.btnTamGiacTren.TabIndex = 7;
+            this.btnTamGiacTren.Text = "Kiểm tra tam giác trên";
+            this.btnTamGiacTren.UseVisualStyleBackColor = true;
+            this.btnTamGiacTren.Click += new System.EventHandler(this.btnTamGiacTren_Click);
             // 
             // Bai13
             // 
@@ -176,5 +188,6 @@
         private TextBox txtbDong;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Button btnTotal;
+        private Button btnTamGiacTren;
     }
 }
