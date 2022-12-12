@@ -47,14 +47,15 @@
             this.btnCreateMatrixA = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnPlusMatrix = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
-            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
@@ -67,6 +68,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnPlusMatrix);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.btnMultiplication);
@@ -228,7 +230,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(772, 548);
+            this.tabPage2.Size = new System.Drawing.Size(792, 548);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ma trận A";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -239,10 +241,20 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(772, 548);
+            this.tabPage3.Size = new System.Drawing.Size(792, 548);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ma trận B";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnPlusMatrix
+            // 
+            this.btnPlusMatrix.Location = new System.Drawing.Point(186, 409);
+            this.btnPlusMatrix.Name = "btnPlusMatrix";
+            this.btnPlusMatrix.Size = new System.Drawing.Size(138, 29);
+            this.btnPlusMatrix.TabIndex = 16;
+            this.btnPlusMatrix.Text = "Tổng 2 ma trận";
+            this.btnPlusMatrix.UseVisualStyleBackColor = true;
+            this.btnPlusMatrix.Click += new System.EventHandler(this.btnPlusMatrix_Click);
             // 
             // Bai14
             // 
@@ -281,5 +293,6 @@
         private Button btnCreateMatrixB;
         private Label label6;
         private Label label5;
+        private Button btnPlusMatrix;
     }
 }

@@ -92,8 +92,8 @@ namespace LTWindows
                 return;
             }
 
-            string resultRightToLeft = a.TotalDiagonalRightToLeft(a).ToString();
-            string resultLeftToRight = a.TotalDiagonalLeftToRight(a).ToString();
+            string resultRightToLeft = Matrix.TotalDiagonalRightToLeft(a).ToString();
+            string resultLeftToRight = Matrix.TotalDiagonalLeftToRight(a).ToString();
             MessageBox.Show("Tổng đường chéo chính = " + resultRightToLeft + "\nTổng đường chéo phụ = " + resultLeftToRight);
         }
 

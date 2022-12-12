@@ -22,7 +22,7 @@
 			}
 		}
 
-		public int TotalDiagonalRightToLeft(Matrix a)
+		public static int TotalDiagonalRightToLeft(Matrix a)
 		{
 			int result = 0;
 
@@ -34,7 +34,7 @@
 			return result;
 		}
 
-		public int TotalDiagonalLeftToRight(Matrix a)
+		public static int TotalDiagonalLeftToRight(Matrix a)
 		{
 			int result = 0;
 
@@ -47,12 +47,12 @@
 			return result;
 		}
 
-		public Matrix Multiplication(Matrix a, Matrix b)
+		public static Matrix Multiplication(Matrix a, Matrix b)
 		{
 			if (a.SoDong != b.SoCot)
 			{
-				MessageBox.Show("");
-				return new Matrix(0, 0);
+				MessageBox.Show("Không tính được!");
+				return null;
 			}
 
 			Matrix result = new(a.SoDong, b.SoCot);
@@ -66,6 +66,27 @@
 					{
 						result.matrix[i, j] += a.matrix[i, r] * b.matrix[r, j];
 					}
+				}
+			}
+
+			return result;
+		}
+
+		public static Matrix Plus(Matrix a, Matrix b)
+		{
+			if (a.SoCot != b.SoCot || a.SoDong != b.SoDong)
+			{
+				MessageBox.Show("Không tính được!");
+                return null;
+			}
+
+			Matrix result = new(a.SoCot, a.SoDong);
+
+			for (int i = 0; i < a.SoDong; i++)
+			{
+				for (int j = 0; j < a.SoCot; j++)
+				{
+					result.matrix[i, j] = a.matrix[i, j] + b.matrix[i, j];
 				}
 			}
 

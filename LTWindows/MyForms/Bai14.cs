@@ -5,8 +5,8 @@ namespace LTWindows
     public partial class Bai14 : Form
     {
         MainView _prev;
-        Matrix? a;
-        Matrix? b;
+        Matrix? A;
+        Matrix? B;
 
         public Bai14(MainView prev)
         {
@@ -30,9 +30,9 @@ namespace LTWindows
                 SoCot = int.Parse(txtbCotA.Text);
             }
 
-            a = new(SoDong, SoCot);
+            A = new(SoDong, SoCot);
             this.tabPage2.Controls.Clear();
-            DisplayMatrix(a, this.tabPage2);
+            DisplayMatrix(A, this.tabPage2);
             this.tabControl.SelectTab(this.tabPage2);
         }
 
@@ -111,25 +111,29 @@ namespace LTWindows
                 SoCot = int.Parse(txtbCotB.Text);
             }
 
-            b = new(SoDong, SoCot);
+            B = new(SoDong, SoCot);
             this.tabPage2.Controls.Clear();
-            DisplayMatrix(b, this.tabPage3);
+            DisplayMatrix(B, this.tabPage3);
             this.tabControl.SelectTab(this.tabPage3);
         }
 
         private void btnMultiplication_Click(object sender, EventArgs e)
         {
-            if (a is null)
+            if (A is null)
             {
                 MessageBox.Show("Ma trận hiện tại đang rỗng!");
                 return;
             }
-            Matrix temp = a.Multiplication(a, b);
+            Matrix temp = Matrix.Multiplication(A, B);
             if (temp != null)
             {
-                this.tabControl.TabPages.Add(new TabPage("Kết quả"));
-                DisplayResultMatrix(temp, this.tabControl.TabPages[3]);
-                this.tabControl.SelectTab(3);
+                this.tabControl.TabPages.Add(new TabPage("Kết quả tích 2 ma trận"));
+                DisplayResultMatrix(temp, this.tabControl.TabPages[this.tabControl.TabPages.Count - 1]);
+                this.tabControl.SelectTab(this.tabControl.TabPages.Count - 1);
+            }
+            else
+            {
+                MessageBox.Show("Kết quả rỗng!");
             }
         }
 
@@ -138,6 +142,26 @@ namespace LTWindows
             if (_prev != null)
             {
                 _prev.Show();
+            }
+        }
+
+        private void btnPlusMatrix_Click(object sender, EventArgs e)
+        {
+            if (A is null)
+            {
+                MessageBox.Show("Ma trận hiện tại đang rỗng!");
+                return;
+            }
+            Matrix temp = Matrix.Plus(A, B);
+            if (temp != null)
+            {
+                this.tabControl.TabPages.Add(new TabPage("Kết quả tổng 2 ma trận"));
+                DisplayResultMatrix(temp, this.tabControl.TabPages[this.tabControl.TabPages.Count - 1]);
+                this.tabControl.SelectTab(this.tabControl.TabPages.Count - 1);
+            }
+            else
+            {
+                MessageBox.Show("Kết quả rỗng!");
             }
         }
     }
