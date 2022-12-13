@@ -1,4 +1,4 @@
-using System.Drawing.Drawing2D;
+using LTWindows.Core;
 
 namespace LTWindows
 {
@@ -7,36 +7,37 @@ namespace LTWindows
         public MainView()
         {
             InitializeComponent();
-            DoubleBuffered = true;
         }
 
-        // Setup linear gradient background
-        protected override void OnPaintBackground(PaintEventArgs e)
+        private void btnTinh_Click(object sender, EventArgs e)
         {
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                               Color.Gray,
-                                                               Color.Black,
-                                                               45F))
+            if (txtCanh1.Text == string.Empty || txtCanh2.Text == string.Empty)
             {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
-        }
-
-        private void btnBai_Click(object sender, EventArgs e)
-        {
-            string className = ((Button)sender).Name.Split("btn")[1];
-            string objectToInstantiate = "LTWindows." + className + ", LTWindows";
-
-            Type? objectType = Type.GetType(objectToInstantiate);
-            Form? instantiatedObject = (Form)Activator.CreateInstance(objectType, this);
-            if (instantiatedObject == null)
-            {
-                MessageBox.Show("Error");
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!\nXin hãy kiểm tra lại!");
                 return;
             }
-            instantiatedObject.Show();
 
-            this.Hide();
+            try
+            {
+                int canh1 = int.Parse(txtCanh1.Text);
+                int canh2 = int.Parse(txtCanh2.Text);
+                txtChuVi.Text = ((canh1 + canh2) * 2).ToString();
+                txtDienTich.Text = (canh1 * canh2).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputManager.txtb_KeyPress(ref sender, ref e);
         }
     }
 }
