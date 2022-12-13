@@ -1,6 +1,6 @@
 ﻿namespace LTWindows
 {
-    partial class MainView
+    partial class Bai1
     {
         /// <summary>
         ///  Required designer variable.

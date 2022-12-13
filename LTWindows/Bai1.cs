@@ -2,9 +2,9 @@ using LTWindows.Core;
 
 namespace LTWindows
 {
-    public partial class MainView : Form
+    public partial class Bai1 : Form
     {
-        public MainView()
+        public Bai1()
         {
             InitializeComponent();
         }
@@ -19,8 +19,9 @@ namespace LTWindows
 
             try
             {
-                int canh1 = int.Parse(txtCanh1.Text);
-                int canh2 = int.Parse(txtCanh2.Text);
+                float canh1 = float.Parse(txtCanh1.Text);
+                float canh2 = float.Parse(txtCanh2.Text);
+                HCN hcn = new(canh1, canh2);
                 txtChuVi.Text = ((canh1 + canh2) * 2).ToString();
                 txtDienTich.Text = (canh1 * canh2).ToString();
             }
@@ -29,7 +30,6 @@ namespace LTWindows
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -38,6 +38,11 @@ namespace LTWindows
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputManager.txtb_KeyPress(ref sender, ref e);
+        }
+
+        private void MainView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

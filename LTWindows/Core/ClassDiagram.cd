@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LTWindows.Core.HCN">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAABAAAAAQAAAAgACABAAAgAA=</HashCode>
+      <FileName>Core\HCN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTWindows.HinhTron">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAIQA=</HashCode>
+      <FileName>HinhTron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTWindows.HinhVuong">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAAAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>HinhVuong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTWindows.HinhTamGiac">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAgEAAAIAAAAAAAAAAABAAIAgQAAAAAAAgAAAAoAA=</HashCode>
+      <FileName>HinhTamGiac.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
