@@ -13,14 +13,15 @@ namespace LTWindows
         {
             if (txtCanh1.Text == string.Empty || txtCanh2.Text == string.Empty)
             {
-                MessageBox.Show("Bạn chưa nhập đủ thông tin!\nXin hãy kiểm tra lại!");
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!" +
+                              "\nXin hãy kiểm tra lại!");
                 return;
             }
 
             try
             {
-                float canh1 = float.Parse(txtCanh1.Text);
-                float canh2 = float.Parse(txtCanh2.Text);
+                double canh1 = double.Parse(txtCanh1.Text);
+                double canh2 = double.Parse(txtCanh2.Text);
                 HCN hcn = new(canh1, canh2);
                 txtChuVi.Text = ((canh1 + canh2) * 2).ToString();
                 txtDienTich.Text = (canh1 * canh2).ToString();

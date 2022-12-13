@@ -139,6 +139,8 @@ namespace LTWindows
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputManager.txtb_KeyPress(ref sender, ref e);
+
+            // When user press 'enter' system call btnGiai_Click
             if (e.KeyChar == (int)13)
             {
                 btnGiai_Click(sender, e);
