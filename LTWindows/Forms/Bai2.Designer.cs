@@ -1,6 +1,6 @@
 ﻿namespace LTWindows
 {
-    partial class Bai2
+    partial class Lab3
     {
         /// <summary>
         /// Required designer variable.

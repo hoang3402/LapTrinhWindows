@@ -2,10 +2,10 @@
 
 namespace LTWindows
 {
-    public partial class Bai2 : Form
+    public partial class Lab3 : Form
     {
         private string? _curChoose;
-        public Bai2()
+        public Lab3()
         {
             InitializeComponent();
         }
@@ -95,44 +95,55 @@ namespace LTWindows
         {
             if (txtA.Text == string.Empty)
             {
-                MessageBox.Show("Không được để trống!");
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
                 return;
             }
             double r = double.Parse(txtA.Text);
             HinhTron HT = new(r);
-            txtChuVi.Text = HT.LayChuVi().ToString();
-            txtDienTich.Text = HT.LayDienTich().ToString();
-            MessageBox.Show(HT.Xuat());
+            txtChuVi.Text = HT.LayChuVi().ToString("0.00");
+            txtDienTich.Text = HT.LayDienTich().ToString("0.00");
             return;
         }
         private void GiaiHinhVuong()
         {
+            if (txtA.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             double canh = double.Parse(txtA.Text);
             HinhVuong HV = new(canh);
-            txtChuVi.Text = HV.LayChuVi().ToString();
-            txtDienTich.Text = HV.LayDienTich().ToString();
-            MessageBox.Show(HV.Xuat());
+            txtChuVi.Text = HV.LayChuVi().ToString("0.00");
+            txtDienTich.Text = HV.LayDienTich().ToString("0.00");
             return;
         }
         private void GiaiHinhChuNhat()
         {
+            if (txtA.Text == string.Empty || txtB.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             double a = double.Parse(txtA.Text);
             double b = double.Parse(txtB.Text);
             HCN hcn = new(a, b);
-            txtChuVi.Text = hcn.ChuVi().ToString();
-            txtDienTich.Text = hcn.DienTich().ToString();
-            MessageBox.Show(hcn.Xuat());
+            txtChuVi.Text = hcn.ChuVi().ToString("0.00");
+            txtDienTich.Text = hcn.DienTich().ToString("0.00");
             return;
         }
         private void GiaiHinhTamGiac()
         {
+            if (txtA.Text == string.Empty || txtB.Text == string.Empty || txtC.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             int a = int.Parse(txtA.Text);
             int b = int.Parse(txtB.Text);
             int c = int.Parse(txtC.Text);
             HinhTamGiac TG = new(a, b, c);
-            txtChuVi.Text = TG.LayChuVi().ToString();
-            txtDienTich.Text = TG.LayDienTich().ToString();
-            MessageBox.Show(TG.Xuat());
+            txtChuVi.Text = TG.LayChuVi().ToString("0.00");
+            txtDienTich.Text = TG.LayDienTich().ToString("0.00");
             return;
         }
 
