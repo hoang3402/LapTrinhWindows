@@ -95,7 +95,7 @@ namespace LTWindows
         {
             if (txtA.Text == string.Empty)
             {
-                MessageBox.Show("Không được để trống!");
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
                 return;
             }
             double r = double.Parse(txtA.Text);
@@ -107,6 +107,11 @@ namespace LTWindows
         }
         private void GiaiHinhVuong()
         {
+            if (txtA.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             double canh = double.Parse(txtA.Text);
             HinhVuong HV = new(canh);
             txtChuVi.Text = HV.LayChuVi().ToString();
@@ -116,6 +121,11 @@ namespace LTWindows
         }
         private void GiaiHinhChuNhat()
         {
+            if (txtA.Text == string.Empty || txtB.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             double a = double.Parse(txtA.Text);
             double b = double.Parse(txtB.Text);
             HCN hcn = new(a, b);
@@ -126,6 +136,11 @@ namespace LTWindows
         }
         private void GiaiHinhTamGiac()
         {
+            if (txtA.Text == string.Empty || txtB.Text == string.Empty || txtC.Text == string.Empty)
+            {
+                MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                return;
+            }
             int a = int.Parse(txtA.Text);
             int b = int.Parse(txtB.Text);
             int c = int.Parse(txtC.Text);
