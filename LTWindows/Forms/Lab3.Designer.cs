@@ -262,7 +262,7 @@
             this.panel1.Size = new System.Drawing.Size(697, 331);
             this.panel1.TabIndex = 6;
             // 
-            // Bai2
+            // Lab3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -280,9 +280,10 @@
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnGiai);
             this.Controls.Add(this.panel1);
-            this.Name = "Bai2";
+            this.Name = "Lab3";
             this.Text = "Bài 2";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bai2_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Lab3_FormClosing);
+            this.Load += new System.EventHandler(this.Lab3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

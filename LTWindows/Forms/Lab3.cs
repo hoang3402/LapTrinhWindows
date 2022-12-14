@@ -157,9 +157,14 @@ namespace LTWindows
                 btnGiai_Click(sender, e);
             }
         }
-        private void Bai2_FormClosing(object sender, EventArgs e)
+        private void Lab3_FormClosing(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Lab3_Load(object sender, EventArgs e)
+        {
+            disableAndReset();
         }
     }
 }
