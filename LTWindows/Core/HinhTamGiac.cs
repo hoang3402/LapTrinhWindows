@@ -58,9 +58,9 @@
             return Math.Sqrt(p * (p - Canh1) * (p - Canh2) * (p - Canh3));
         }
 
-        public void Loi()
+        public string Loi()
         {
-            throw new System.NotImplementedException();
+            return "Lỗi!";
         }
 
         public string PhanLoaiTamGiac()
