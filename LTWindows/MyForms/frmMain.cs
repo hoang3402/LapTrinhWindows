@@ -57,5 +57,15 @@ namespace LTWindows
             _prev.Show();
             this.Close();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_prev == null)
+            {
+                MessageBox.Show("Error");
+                return;
+            }
+            _prev.Show();
+        }
     }
 }

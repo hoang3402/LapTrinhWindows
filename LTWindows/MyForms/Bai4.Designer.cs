@@ -129,7 +129,7 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // Bai6
+            // Bai4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,8 +143,8 @@
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
-            this.Name = "Bai6";
-            this.Text = "Bài 6 In ra màn hình bảng cửu chương";
+            this.Name = "Bai4";
+            this.Text = "Bài 4 In ra màn hình bảng cửu chương";
             this.Activated += new System.EventHandler(this.Bai4_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bai4_FormClosing);
             this.ResumeLayout(false);
