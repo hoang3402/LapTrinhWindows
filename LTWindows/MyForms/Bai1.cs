@@ -5,10 +5,10 @@ namespace LTWindows
 {
     public partial class Bai1 : Form
     {
-        private MainView? _prev;
+        private frmMain? _prev;
         public Bai1() => InitializeComponent();
 
-        public Bai1(MainView prev)
+        public Bai1(frmMain prev)
         {
             InitializeComponent();
             _prev = prev;

@@ -1,10 +1,20 @@
+using LTWindows.MyForms;
+
 namespace LTWindows
 {
-    public partial class MainView : Form
+    public partial class frmMain : Form
     {
-        public MainView()
+        frmDangNhap? _prev;
+
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        public frmMain(frmDangNhap prev)
+        {
+            InitializeComponent();
+            _prev = prev;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -35,6 +45,17 @@ namespace LTWindows
                 return;
             }
             instantiatedObject.Show();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            if (_prev == null)
+            {
+                MessageBox.Show("Error");
+                return;
+            }
+            _prev.Show();
+            this.Close();
         }
     }
 }

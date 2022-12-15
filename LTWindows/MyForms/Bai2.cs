@@ -4,9 +4,9 @@ namespace LTWindows
 {
     public partial class Bai2 : Form
     {
-        readonly MainView? _prev;
+        readonly frmMain? _prev;
 
-        public Bai2(MainView prev)
+        public Bai2(frmMain prev)
         {
             InitializeComponent();
             _prev = prev;

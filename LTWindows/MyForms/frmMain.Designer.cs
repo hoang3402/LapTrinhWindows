@@ -1,6 +1,6 @@
 ﻿namespace LTWindows
 {
-    partial class MainView
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -106,6 +106,7 @@
             this.btnReturn.TabIndex = 1;
             this.btnReturn.Text = "Quay về";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnExit
             // 
@@ -117,7 +118,7 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // MainView
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +128,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainView";
+            this.Name = "frmMain";
             this.Text = "Lab 5 - Nguyễn Văn Hoàng - 12101005";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

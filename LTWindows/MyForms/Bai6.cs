@@ -2,14 +2,14 @@
 {
 	public partial class Bai4 : Form
 	{
-		MainView? _prev;
+		frmMain? _prev;
 
 		public Bai4()
 		{
 			InitializeComponent();
 		}
 
-		public Bai4(MainView _prev)
+		public Bai4(frmMain _prev)
 		{
 			InitializeComponent();
 			this._prev = _prev;
