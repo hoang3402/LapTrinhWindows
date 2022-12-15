@@ -1,5 +1,3 @@
-using System.Drawing.Drawing2D;
-
 namespace LTWindows
 {
     public partial class MainView : Form
@@ -7,27 +5,29 @@ namespace LTWindows
         public MainView()
         {
             InitializeComponent();
-            DoubleBuffered = true;
         }
 
-        // Setup linear gradient background
-        protected override void OnPaintBackground(PaintEventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                               Color.Gray,
-                                                               Color.Black,
-                                                               45F))
-            {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
-            }
+            Application.Exit();
         }
 
-        private void btnBai_Click(object sender, EventArgs e)
+        private void Info_Click(object sender, EventArgs e)
         {
-            string className = ((Button)sender).Name.Split("btn")[1];
-            string objectToInstantiate = "LTWindows." + className + ", LTWindows";
+            MessageBox.Show("Trường đại học Yersin Đà Lạt" +
+                "\nNguyễn Văn Hoàng - 12101005" +
+                "\nLớp CNTT K18", "Thông tin tác giả");
+        }
+
+        private void ClickEvent(object sender, EventArgs e)
+        {
+            string _Name = ((ToolStripMenuItem)sender).Name;
+            if (string.IsNullOrEmpty(_Name)) { return; }
+
+            string objectToInstantiate = "LTWindows." + _Name + ", LTWindows";
 
             Type? objectType = Type.GetType(objectToInstantiate);
+            if (objectType == null) { return; }
             Form? instantiatedObject = (Form)Activator.CreateInstance(objectType, this);
             if (instantiatedObject == null)
             {
@@ -35,8 +35,6 @@ namespace LTWindows
                 return;
             }
             instantiatedObject.Show();
-
-            this.Hide();
         }
     }
 }

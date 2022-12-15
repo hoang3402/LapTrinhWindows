@@ -1,21 +1,21 @@
 ﻿namespace LTWindows
 {
-	public partial class Bai6 : Form
+	public partial class Bai4 : Form
 	{
 		MainView? _prev;
 
-		public Bai6()
+		public Bai4()
 		{
 			InitializeComponent();
 		}
 
-		public Bai6(MainView _prev)
+		public Bai4(MainView _prev)
 		{
 			InitializeComponent();
 			this._prev = _prev;
 		}
 
-		private void Bai6_FormClosing(object sender, FormClosingEventArgs e)
+		private void Bai4_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (this._prev != null) { _prev.Show(); }
 		}
@@ -82,7 +82,7 @@
 			}
 		}
 
-		private void Bai6_Activated(object sender, EventArgs e)
+		private void Bai4_Activated(object sender, EventArgs e)
 		{
 			Giai();
 		}
