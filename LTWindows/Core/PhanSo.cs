@@ -14,6 +14,10 @@ namespace LTWindows.Core
 
         public PhanSo(int Tu, int Mau)
         {
+            if (Mau == 0)
+            {
+                throw new Exception("Mẫu số không thể bằng 0!");
+            }
             TuSo = Tu;
             this.Mau = Mau;
         }
@@ -21,12 +25,19 @@ namespace LTWindows.Core
         public int MauSo
         {
             get => Mau;
-            set => Mau = value;
+            set
+            {
+                if (value == 0)
+                {
+                    throw new Exception("Mẫu số không thể bằng 0!");
+                }
+                Mau = value;
+            }
         }
 
         public int TuSo { get; set; }
 
-        public PhanSo RutGon(PhanSo a)
+        public static PhanSo RutGon(PhanSo a)
         {
             int _gcd = (int)BigInteger.GreatestCommonDivisor(a.TuSo, a.MauSo);
             a.TuSo /= _gcd;
@@ -34,7 +45,7 @@ namespace LTWindows.Core
             return a;
         }
 
-        public PhanSo Tong(PhanSo a, PhanSo b)
+        public static PhanSo Tong(PhanSo a, PhanSo b)
         {
             PhanSo result = new();
 
@@ -50,7 +61,7 @@ namespace LTWindows.Core
             return RutGon(result);
         }
 
-        public PhanSo Hieu(PhanSo a, PhanSo b)
+        public static PhanSo Hieu(PhanSo a, PhanSo b)
         {
             PhanSo result = new();
 
@@ -66,7 +77,7 @@ namespace LTWindows.Core
             return RutGon(result);
         }
 
-        public PhanSo Tich(PhanSo a, PhanSo b)
+        public static PhanSo Tich(PhanSo a, PhanSo b)
         {
             PhanSo result = new();
             result.TuSo = a.TuSo * b.TuSo;
@@ -74,12 +85,21 @@ namespace LTWindows.Core
             return RutGon(result);
         }
 
-        public PhanSo Thuong(PhanSo a, PhanSo b)
+        public static PhanSo Thuong(PhanSo a, PhanSo b)
         {
             PhanSo result = new();
             result.TuSo = a.TuSo * b.MauSo;
             result.MauSo = a.MauSo * b.TuSo;
             return RutGon(result);
+        }
+
+        public static bool CheckValid(PhanSo a)
+        {
+            if (a.MauSo == 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
