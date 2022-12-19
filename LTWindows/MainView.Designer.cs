@@ -28,249 +28,176 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBai14 = new System.Windows.Forms.Button();
-            this.btnBai13 = new System.Windows.Forms.Button();
-            this.btnBai12 = new System.Windows.Forms.Button();
-            this.btnBai10 = new System.Windows.Forms.Button();
-            this.btnBai8 = new System.Windows.Forms.Button();
-            this.btnBai7 = new System.Windows.Forms.Button();
-            this.btnBai6 = new System.Windows.Forms.Button();
-            this.btnBai4 = new System.Windows.Forms.Button();
-            this.btnBai3 = new System.Windows.Forms.Button();
-            this.btnBai2 = new System.Windows.Forms.Button();
-            this.btnBai1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Age,
+            this.Salary});
+            this.dataGridView.Location = new System.Drawing.Point(12, 259);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(601, 240);
+            this.dataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Age
+            // 
+            this.Age.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Age.HeaderText = "Age";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            // 
+            // Salary
+            // 
+            this.Salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Salary.HeaderText = "Salary";
+            this.Salary.MinimumWidth = 6;
+            this.Salary.Name = "Salary";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(93, 60);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(49, 20);
+            this.name.TabIndex = 1;
+            this.name.Text = "Name";
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(797, 108);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lab 2";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Size = new System.Drawing.Size(36, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Age";
             // 
-            // panel1
+            // label2
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnBai14);
-            this.panel1.Controls.Add(this.btnBai13);
-            this.panel1.Controls.Add(this.btnBai12);
-            this.panel1.Controls.Add(this.btnBai10);
-            this.panel1.Controls.Add(this.btnBai8);
-            this.panel1.Controls.Add(this.btnBai7);
-            this.panel1.Controls.Add(this.btnBai6);
-            this.panel1.Controls.Add(this.btnBai4);
-            this.panel1.Controls.Add(this.btnBai3);
-            this.panel1.Controls.Add(this.btnBai2);
-            this.panel1.Controls.Add(this.btnBai1);
-            this.panel1.Location = new System.Drawing.Point(12, 111);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(773, 321);
-            this.panel1.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(93, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Salary";
             // 
-            // btnBai14
+            // txtName
             // 
-            this.btnBai14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai14.Location = new System.Drawing.Point(461, 218);
-            this.btnBai14.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai14.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai14.Name = "btnBai14";
-            this.btnBai14.Size = new System.Drawing.Size(212, 29);
-            this.btnBai14.TabIndex = 22;
-            this.btnBai14.Text = "Bài 14";
-            this.btnBai14.UseVisualStyleBackColor = true;
-            this.btnBai14.Click += new System.EventHandler(this.btnBai_Click);
+            this.txtName.Location = new System.Drawing.Point(148, 57);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(186, 27);
+            this.txtName.TabIndex = 2;
             // 
-            // btnBai13
+            // txtAge
             // 
-            this.btnBai13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai13.Location = new System.Drawing.Point(461, 183);
-            this.btnBai13.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai13.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai13.Name = "btnBai13";
-            this.btnBai13.Size = new System.Drawing.Size(212, 29);
-            this.btnBai13.TabIndex = 21;
-            this.btnBai13.Text = "Bài 13";
-            this.btnBai13.UseVisualStyleBackColor = true;
-            this.btnBai13.Click += new System.EventHandler(this.btnBai_Click);
+            this.txtAge.Location = new System.Drawing.Point(148, 104);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(186, 27);
+            this.txtAge.TabIndex = 2;
             // 
-            // btnBai12
+            // txtSalary
             // 
-            this.btnBai12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai12.Location = new System.Drawing.Point(461, 148);
-            this.btnBai12.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai12.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai12.Name = "btnBai12";
-            this.btnBai12.Size = new System.Drawing.Size(212, 29);
-            this.btnBai12.TabIndex = 20;
-            this.btnBai12.Text = "Bài 12";
-            this.btnBai12.UseVisualStyleBackColor = true;
-            this.btnBai12.Click += new System.EventHandler(this.btnBai_Click);
+            this.txtSalary.Location = new System.Drawing.Point(148, 151);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(186, 27);
+            this.txtSalary.TabIndex = 2;
             // 
-            // btnBai10
+            // btnAdd
             // 
-            this.btnBai10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai10.Location = new System.Drawing.Point(461, 113);
-            this.btnBai10.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai10.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai10.Name = "btnBai10";
-            this.btnBai10.Size = new System.Drawing.Size(212, 29);
-            this.btnBai10.TabIndex = 19;
-            this.btnBai10.Text = "Bài 10";
-            this.btnBai10.UseVisualStyleBackColor = true;
-            this.btnBai10.Click += new System.EventHandler(this.btnBai_Click);
+            this.btnAdd.Location = new System.Drawing.Point(409, 56);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnBai8
+            // btnClear
             // 
-            this.btnBai8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai8.Location = new System.Drawing.Point(461, 78);
-            this.btnBai8.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai8.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai8.Name = "btnBai8";
-            this.btnBai8.Size = new System.Drawing.Size(212, 29);
-            this.btnBai8.TabIndex = 18;
-            this.btnBai8.Text = "Bài 8, 9";
-            this.btnBai8.UseVisualStyleBackColor = true;
-            this.btnBai8.Click += new System.EventHandler(this.btnBai_Click);
+            this.btnClear.Location = new System.Drawing.Point(409, 103);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(94, 29);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnBai7
+            // btnExit
             // 
-            this.btnBai7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai7.Location = new System.Drawing.Point(461, 43);
-            this.btnBai7.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai7.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai7.Name = "btnBai7";
-            this.btnBai7.Size = new System.Drawing.Size(212, 29);
-            this.btnBai7.TabIndex = 17;
-            this.btnBai7.Text = "Bài 7";
-            this.btnBai7.UseVisualStyleBackColor = true;
-            this.btnBai7.Click += new System.EventHandler(this.btnBai_Click);
-            // 
-            // btnBai6
-            // 
-            this.btnBai6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai6.Location = new System.Drawing.Point(88, 183);
-            this.btnBai6.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai6.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai6.Name = "btnBai6";
-            this.btnBai6.Size = new System.Drawing.Size(212, 29);
-            this.btnBai6.TabIndex = 16;
-            this.btnBai6.Text = "Bài 6";
-            this.btnBai6.UseVisualStyleBackColor = true;
-            this.btnBai6.Click += new System.EventHandler(this.btnBai_Click);
-            // 
-            // btnBai4
-            // 
-            this.btnBai4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai4.Location = new System.Drawing.Point(88, 148);
-            this.btnBai4.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai4.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai4.Name = "btnBai4";
-            this.btnBai4.Size = new System.Drawing.Size(212, 29);
-            this.btnBai4.TabIndex = 15;
-            this.btnBai4.Text = "Bài 4, 5";
-            this.btnBai4.UseVisualStyleBackColor = true;
-            this.btnBai4.Click += new System.EventHandler(this.btnBai_Click);
-            // 
-            // btnBai3
-            // 
-            this.btnBai3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai3.Location = new System.Drawing.Point(88, 113);
-            this.btnBai3.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai3.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai3.Name = "btnBai3";
-            this.btnBai3.Size = new System.Drawing.Size(212, 29);
-            this.btnBai3.TabIndex = 14;
-            this.btnBai3.Text = "Bài 3, 11";
-            this.btnBai3.UseVisualStyleBackColor = true;
-            this.btnBai3.Click += new System.EventHandler(this.btnBai_Click);
-            // 
-            // btnBai2
-            // 
-            this.btnBai2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai2.Location = new System.Drawing.Point(88, 78);
-            this.btnBai2.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai2.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai2.Name = "btnBai2";
-            this.btnBai2.Size = new System.Drawing.Size(212, 29);
-            this.btnBai2.TabIndex = 13;
-            this.btnBai2.Text = "Bài 2";
-            this.btnBai2.UseVisualStyleBackColor = true;
-            this.btnBai2.Click += new System.EventHandler(this.btnBai_Click);
-            // 
-            // btnBai1
-            // 
-            this.btnBai1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBai1.Location = new System.Drawing.Point(88, 43);
-            this.btnBai1.MaximumSize = new System.Drawing.Size(212, 29);
-            this.btnBai1.MinimumSize = new System.Drawing.Size(212, 29);
-            this.btnBai1.Name = "btnBai1";
-            this.btnBai1.Size = new System.Drawing.Size(212, 29);
-            this.btnBai1.TabIndex = 12;
-            this.btnBai1.Text = "Bài 1";
-            this.btnBai1.UseVisualStyleBackColor = true;
-            this.btnBai1.Click += new System.EventHandler(this.btnBai_Click);
+            this.btnExit.Location = new System.Drawing.Point(409, 150);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(94, 29);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(797, 444);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(625, 511);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.dataGridView);
             this.Name = "MainView";
             this.Text = "Nguyễn Văn Hoàng - 12101005";
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private DataGridView dataGridView;
+        private Label name;
         private Label label1;
-        private Panel panel1;
-        private Button btnBai13;
-        private Button btnBai12;
-        private Button btnBai10;
-        private Button btnBai8;
-        private Button btnBai7;
-        private Button btnBai6;
-        private Button btnBai4;
-        private Button btnBai3;
-        private Button btnBai2;
-        private Button btnBai1;
-        private Button btnBai14;
+        private Label label2;
+        private TextBox txtName;
+        private TextBox txtAge;
+        private TextBox txtSalary;
+        private Button btnAdd;
+        private Button btnClear;
+        private Button btnExit;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Age;
+        private DataGridViewTextBoxColumn Salary;
     }
 }

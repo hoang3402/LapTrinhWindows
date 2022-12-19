@@ -1,4 +1,4 @@
-using System.Drawing.Drawing2D;
+using LTWindows.Core;
 
 namespace LTWindows
 {
@@ -10,33 +10,54 @@ namespace LTWindows
             DoubleBuffered = true;
         }
 
-        // Setup linear gradient background
-        protected override void OnPaintBackground(PaintEventArgs e)
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                               Color.Gray,
-                                                               Color.Black,
-                                                               45F))
+            if (!checkEmpty())
             {
-                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+                MessageBox.Show("Dữ liệu không được để rỗng!");
+                return;
+            }
+
+            try
+            {
+                uint _age = Convert.ToUInt32(txtAge.Text);
+                double _salary = Convert.ToDouble(txtSalary.Text);
+                Person person = new(txtName.Text, _age, _salary);
+                Reset();
+
+                dataGridView.Rows.Add(person.Name, person.Age, person.Salary);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnBai_Click(object sender, EventArgs e)
+        private bool checkEmpty()
         {
-            string className = ((Button)sender).Name.Split("btn")[1];
-            string objectToInstantiate = "LTWindows." + className + ", LTWindows";
+            if (string.IsNullOrEmpty(txtName.Text)) return false;
+            if (string.IsNullOrEmpty(txtAge.Text)) return false;
+            if (string.IsNullOrEmpty(txtSalary.Text)) return false;
 
-            Type? objectType = Type.GetType(objectToInstantiate);
-            Form? instantiatedObject = (Form)Activator.CreateInstance(objectType, this);
-            if (instantiatedObject == null)
-            {
-                MessageBox.Show("Error");
-                return;
-            }
-            instantiatedObject.Show();
+            return true;
+        }
 
-            this.Hide();
+        private void Reset()
+        {
+            txtName.ResetText();
+            txtAge.ResetText();
+            txtSalary.ResetText();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dataGridView.Rows.Clear();
         }
     }
 }
