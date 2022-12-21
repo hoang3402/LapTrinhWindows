@@ -1,4 +1,6 @@
-﻿namespace LTWindows
+﻿using LTWindows.Core;
+
+namespace LTWindows
 {
     public partial class Bai2 : Form
     {
@@ -33,7 +35,11 @@
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            dataGridView.Rows.Clear();
+            if (dataGridView.Rows.Count > 1)
+            {
+                int selectedRowIndex = dataGridView.SelectedCells[0].RowIndex;
+                dataGridView.Rows.RemoveAt(selectedRowIndex);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -43,15 +49,39 @@
                 MessageBox.Show("Không được để rỗng!");
                 return;
             }
+            string mssv = txtMSSV.Text;
+            string hoten = txtHoTen.Text;
+            string phai = txtPhai.Text;
+            string sdt = txtSDT.Text;
+            reset();
+            SinhVien temp = new(mssv, hoten, phai, sdt);
+            dataGridView.Rows.Add(temp.MSSV, temp.HoTen, temp.Phai, temp.Sdt);
+        }
+
+        private void reset()
+        {
+            string[] controlNames = { "txtMSSV", "txtHoTen", "txtPhai", "txtSDT" };
+            foreach (string name in controlNames)
+            {
+                Control control = this.Controls[name];
+                if (control is TextBox)
+                {
+                    ((TextBox)control).ResetText();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).ResetText();
+                }
+            }
         }
 
         private bool checkEmpty()
         {
-            if (String.IsNullOrEmpty(txtMSSV.Text)) return false;
-            if (String.IsNullOrEmpty(txtHoTen.Text)) return false;
-            if (String.IsNullOrEmpty(txtPhai.Text)) return false;
-            if (String.IsNullOrEmpty(txtSDT.Text)) return false;
-
+            string[] strings = { txtMSSV.Text, txtHoTen.Text, txtPhai.Text, txtSDT.Text };
+            if (strings.All(str => String.IsNullOrWhiteSpace(str)))
+            {
+                return false;
+            }
             return true;
         }
     }
