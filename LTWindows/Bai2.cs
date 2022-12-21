@@ -11,10 +11,25 @@ namespace LTWindows
 
         private void Bai2_Load(object sender, EventArgs e)
         {
+            SinhVien[] lop =
+            {
+                new SinhVien("01","Nguyễn Văn A","0900001", "Nữ"),
+                new SinhVien("02","Nguyễn Văn B","0900002", "Nam"),
+                new SinhVien("03","Nguyễn Văn C","0900003", "Nam"),
+                new SinhVien("04","Nguyễn Văn D","0900004", "Nữ"),
+                new SinhVien("05","Nguyễn Văn E","0900005", "Nam"),
+                new SinhVien("06","Nguyễn Văn F","0900006", "Nam")
+            };
+
             dataGridView.Columns.Add("MSSV", "Mã số sinh viên");
-            dataGridView.Columns.Add("HT", "Họ tên");
-            dataGridView.Columns.Add("Phai", "Phái");
+            dataGridView.Columns.Add("HT", "Họ và tên");
             dataGridView.Columns.Add("SDT", "Số điện thoại");
+            dataGridView.Columns.Add("Phai", "Phái");
+
+            foreach (SinhVien i in lop)
+            {
+                dataGridView.Rows.Add(i.MSSV, i.HoTen, i.Sdt, i.Phai);
+            }
 
             // Format Column size
             foreach (DataGridViewTextBoxColumn a in dataGridView.Columns)
@@ -55,7 +70,7 @@ namespace LTWindows
             string sdt = txtSDT.Text;
             reset();
             SinhVien temp = new(mssv, hoten, phai, sdt);
-            dataGridView.Rows.Add(temp.MSSV, temp.HoTen, temp.Phai, temp.Sdt);
+            dataGridView.Rows.Add(temp.MSSV, temp.HoTen, temp.Sdt, temp.Phai);
         }
 
         private void reset()

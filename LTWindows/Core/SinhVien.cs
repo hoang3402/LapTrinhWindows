@@ -12,12 +12,12 @@
         public string Phai { get => _Phai; set => _Phai = value; }
         public string Sdt { get => _Sdt; set => _Sdt = value; }
 
-        public SinhVien(string mssv, string hoten, string phai, string sdt)
+        public SinhVien(string mssv, string hoten, string sdt, string phai)
         {
             _MSSV = mssv;
             _HoTen = hoten;
-            _Phai = phai;
             _Sdt = sdt;
+            _Phai = phai;
         }
     }
 }
