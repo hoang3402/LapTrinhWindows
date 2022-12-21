@@ -2,14 +2,13 @@ using LTWindows.Core;
 
 namespace LTWindows
 {
-    public partial class MainView : Form
+    public partial class Bai1 : Form
     {
-        public MainView()
+        public Bai1()
         {
             InitializeComponent();
             DoubleBuffered = true;
         }
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
