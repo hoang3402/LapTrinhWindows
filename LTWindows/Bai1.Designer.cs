@@ -160,7 +160,7 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // MainView
+            // Bai1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,8 +176,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.name);
             this.Controls.Add(this.dataGridView);
-            this.Name = "MainView";
+            this.Name = "Bai1";
             this.Text = "Nguyễn Văn Hoàng - 12101005";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Bai1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

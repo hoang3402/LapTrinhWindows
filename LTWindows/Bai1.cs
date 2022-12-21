@@ -58,5 +58,10 @@ namespace LTWindows
         {
             dataGridView.Rows.Clear();
         }
+
+        private void Bai1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

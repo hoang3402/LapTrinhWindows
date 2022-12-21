@@ -84,5 +84,10 @@ namespace LTWindows
             }
             return true;
         }
+
+        private void Bai2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

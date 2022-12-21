@@ -188,6 +188,7 @@
             this.Controls.Add(this.dataGridView);
             this.Name = "Bai2";
             this.Text = "Bai2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Bai2_FormClosed);
             this.Load += new System.EventHandler(this.Bai2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
