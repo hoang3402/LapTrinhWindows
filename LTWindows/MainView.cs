@@ -28,20 +28,45 @@ namespace LTWindows
             }
             if (Choose == "Pháp")
             {
+                lstMonAn.Items.Add("Ớt trộn mù tạc");
+                lstMonAn.Items.Add("Dầu xối mỡ");
                 return;
             }
             if (Choose == "Trung Quốc")
             {
+                lstMonAn.Items.Add("Vịt Tiềm");
+                lstMonAn.Items.Add("Hủ Tiếu");
+                lstMonAn.Items.Add("Nước Mắm Xào Giòn");
                 return;
             }
             if (Choose == "Ý")
             {
+                lstMonAn.Items.Add("Bolognese");
+                lstMonAn.Items.Add("Mì Ý - Spaghetti");
+                lstMonAn.Items.Add("Lasagne");
                 return;
             }
             if (Choose == "Việt Nam")
             {
+                lstMonAn.Items.Add("Muối Chấm Nước Mắm");
+                lstMonAn.Items.Add("Cá Kho Tộ");
                 return;
             }
+        }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            lstMonAn.Items.Add("Xin mời chọn loại (Quốc gia)");
+        }
+
+        private void btChon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBoChon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

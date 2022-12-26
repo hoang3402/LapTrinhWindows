@@ -52,12 +52,12 @@
             this.cbLoaiMonAn.FormattingEnabled = true;
             this.cbLoaiMonAn.Items.AddRange(new object[] {
             "Trung Quốc",
-            "Pháp ",
+            "Pháp",
             "Ý",
-            "Việt Nam "});
+            "Việt Nam"});
             this.cbLoaiMonAn.Location = new System.Drawing.Point(9, 42);
             this.cbLoaiMonAn.Name = "cbLoaiMonAn";
-            this.cbLoaiMonAn.Size = new System.Drawing.Size(163, 28);
+            this.cbLoaiMonAn.Size = new System.Drawing.Size(188, 28);
             this.cbLoaiMonAn.TabIndex = 0;
             this.cbLoaiMonAn.SelectedIndexChanged += new System.EventHandler(this.cbLoaiMonAn_SelectedIndexChanged);
             this.cbLoaiMonAn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbLoaiMonAn_KeyPress);
@@ -78,7 +78,7 @@
             this.lstMonAn.ItemHeight = 20;
             this.lstMonAn.Location = new System.Drawing.Point(9, 109);
             this.lstMonAn.Name = "lstMonAn";
-            this.lstMonAn.Size = new System.Drawing.Size(163, 244);
+            this.lstMonAn.Size = new System.Drawing.Size(188, 244);
             this.lstMonAn.TabIndex = 2;
             // 
             // dgMonAnChon
@@ -87,11 +87,11 @@
             this.dgMonAnChon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FoodName,
             this.Count});
-            this.dgMonAnChon.Location = new System.Drawing.Point(375, 67);
+            this.dgMonAnChon.Location = new System.Drawing.Point(441, 67);
             this.dgMonAnChon.Name = "dgMonAnChon";
             this.dgMonAnChon.RowHeadersWidth = 51;
             this.dgMonAnChon.RowTemplate.Height = 29;
-            this.dgMonAnChon.Size = new System.Drawing.Size(439, 311);
+            this.dgMonAnChon.Size = new System.Drawing.Size(373, 311);
             this.dgMonAnChon.TabIndex = 3;
             // 
             // FoodName
@@ -111,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 80);
+            this.label2.Location = new System.Drawing.Point(259, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 5;
@@ -119,25 +119,27 @@
             // 
             // btChon
             // 
-            this.btChon.Location = new System.Drawing.Point(233, 175);
+            this.btChon.Location = new System.Drawing.Point(281, 175);
             this.btChon.Name = "btChon";
             this.btChon.Size = new System.Drawing.Size(94, 29);
             this.btChon.TabIndex = 6;
             this.btChon.Text = "Chọn";
             this.btChon.UseVisualStyleBackColor = true;
+            this.btChon.Click += new System.EventHandler(this.btChon_Click);
             // 
             // btBoChon
             // 
-            this.btBoChon.Location = new System.Drawing.Point(233, 210);
+            this.btBoChon.Location = new System.Drawing.Point(281, 210);
             this.btBoChon.Name = "btBoChon";
             this.btBoChon.Size = new System.Drawing.Size(94, 29);
             this.btBoChon.TabIndex = 6;
             this.btBoChon.Text = "Bỏ chọn";
             this.btBoChon.UseVisualStyleBackColor = true;
+            this.btBoChon.Click += new System.EventHandler(this.btBoChon_Click);
             // 
             // btChonLai
             // 
-            this.btChonLai.Location = new System.Drawing.Point(233, 326);
+            this.btChonLai.Location = new System.Drawing.Point(281, 326);
             this.btChonLai.Name = "btChonLai";
             this.btChonLai.Size = new System.Drawing.Size(94, 29);
             this.btChonLai.TabIndex = 6;
@@ -172,13 +174,13 @@
             this.groupBox1.Controls.Add(this.cbLoaiMonAn);
             this.groupBox1.Location = new System.Drawing.Point(14, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(192, 374);
+            this.groupBox1.Size = new System.Drawing.Size(212, 374);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(212, 103);
+            this.txtSoLuong.Location = new System.Drawing.Point(260, 103);
             this.txtSoLuong.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -214,6 +216,7 @@
             this.Controls.Add(this.dgMonAnChon);
             this.Name = "MainView";
             this.Text = "Nguyễn Văn Hoàng - 12101005";
+            this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgMonAnChon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
