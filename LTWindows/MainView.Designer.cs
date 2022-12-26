@@ -145,6 +145,7 @@
             this.btChonLai.TabIndex = 6;
             this.btChonLai.Text = "Chọn lại";
             this.btChonLai.UseVisualStyleBackColor = true;
+            this.btChonLai.Click += new System.EventHandler(this.btChonLai_Click);
             // 
             // btKetThuc
             // 

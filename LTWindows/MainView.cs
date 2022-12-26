@@ -61,10 +61,22 @@ namespace LTWindows
 
         private void btChon_Click(object sender, EventArgs e)
         {
-
+            if (lstMonAn.SelectedItem == null)
+            {
+                MessageBox.Show("Chọn món đê");
+                return;
+            }
+            string ten = lstMonAn.SelectedItem.ToString();
+            decimal sl = txtSoLuong.Value;
+            dgMonAnChon.Rows.Add(ten, sl);
         }
 
         private void btBoChon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btChonLai_Click(object sender, EventArgs e)
         {
 
         }
