@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lstMonAn = new System.Windows.Forms.ListBox();
             this.dgMonAnChon = new System.Windows.Forms.DataGridView();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btChon = new System.Windows.Forms.Button();
             this.btBoChon = new System.Windows.Forms.Button();
@@ -59,6 +57,7 @@
             this.cbLoaiMonAn.Name = "cbLoaiMonAn";
             this.cbLoaiMonAn.Size = new System.Drawing.Size(188, 28);
             this.cbLoaiMonAn.TabIndex = 0;
+            this.cbLoaiMonAn.Text = "Việt Nam";
             this.cbLoaiMonAn.SelectedIndexChanged += new System.EventHandler(this.cbLoaiMonAn_SelectedIndexChanged);
             this.cbLoaiMonAn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbLoaiMonAn_KeyPress);
             // 
@@ -80,33 +79,18 @@
             this.lstMonAn.Name = "lstMonAn";
             this.lstMonAn.Size = new System.Drawing.Size(188, 244);
             this.lstMonAn.TabIndex = 2;
+            this.lstMonAn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lstMonAn_KeyPress);
+            this.lstMonAn.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstMonAn_MouseDoubleClick);
             // 
             // dgMonAnChon
             // 
             this.dgMonAnChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMonAnChon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FoodName,
-            this.Count});
             this.dgMonAnChon.Location = new System.Drawing.Point(441, 67);
             this.dgMonAnChon.Name = "dgMonAnChon";
             this.dgMonAnChon.RowHeadersWidth = 51;
             this.dgMonAnChon.RowTemplate.Height = 29;
             this.dgMonAnChon.Size = new System.Drawing.Size(373, 311);
             this.dgMonAnChon.TabIndex = 3;
-            // 
-            // FoodName
-            // 
-            this.FoodName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FoodName.HeaderText = "Tên món ăn";
-            this.FoodName.MinimumWidth = 6;
-            this.FoodName.Name = "FoodName";
-            // 
-            // Count
-            // 
-            this.Count.HeaderText = "Số Lượng";
-            this.Count.MinimumWidth = 6;
-            this.Count.Name = "Count";
-            this.Count.Width = 125;
             // 
             // label2
             // 
@@ -240,8 +224,6 @@
         private Button btKetThuc;
         private Label label3;
         private GroupBox groupBox1;
-        private DataGridViewTextBoxColumn FoodName;
-        private DataGridViewTextBoxColumn Count;
         private NumericUpDown txtSoLuong;
     }
 }
