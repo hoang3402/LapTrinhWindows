@@ -6,5 +6,20 @@ namespace LTWindows
         {
             InitializeComponent();
         }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
