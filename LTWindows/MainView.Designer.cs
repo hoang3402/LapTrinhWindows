@@ -46,14 +46,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.comboBoxTable = new System.Windows.Forms.ComboBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -253,15 +253,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // button16
+            // btnClear
             // 
-            this.button16.Location = new System.Drawing.Point(45, 327);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(78, 29);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Xóa";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.btnClear.Location = new System.Drawing.Point(45, 327);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(78, 29);
+            this.btnClear.TabIndex = 0;
+            this.btnClear.Text = "Xóa";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label2
             // 
@@ -272,36 +272,46 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên bàn";
             // 
-            // button17
+            // btnOrder
             // 
-            this.button17.Location = new System.Drawing.Point(475, 327);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(78, 29);
-            this.button17.TabIndex = 0;
-            this.button17.Text = "Order";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.btnOrder.Location = new System.Drawing.Point(475, 327);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(78, 29);
+            this.btnOrder.TabIndex = 0;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // comboBox1
+            // comboBoxTable
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(234, 327);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 28);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxTable.FormattingEnabled = true;
+            this.comboBoxTable.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBoxTable.Location = new System.Drawing.Point(234, 327);
+            this.comboBoxTable.Name = "comboBoxTable";
+            this.comboBoxTable.Size = new System.Drawing.Size(194, 28);
+            this.comboBoxTable.TabIndex = 3;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 362);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(589, 320);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 362);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 29;
+            this.dataGridView.Size = new System.Drawing.Size(589, 320);
+            this.dataGridView.TabIndex = 4;
             // 
             // MainView
             // 
@@ -309,19 +319,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(618, 702);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.comboBoxTable);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.btnClear);
+            this.MaximumSize = new System.Drawing.Size(636, 749);
+            this.MinimumSize = new System.Drawing.Size(636, 749);
             this.Name = "MainView";
             this.Text = "Nguyễn Văn Hoàng - 12101005";
+            this.Load += new System.EventHandler(this.MainView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,10 +360,10 @@
         private Button button5;
         private Button button2;
         private Button button1;
-        private Button button16;
+        private Button btnClear;
         private Label label2;
-        private Button button17;
-        private ComboBox comboBox1;
-        private DataGridView dataGridView1;
+        private Button btnOrder;
+        private ComboBox comboBoxTable;
+        private DataGridView dataGridView;
     }
 }
