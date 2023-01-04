@@ -42,6 +42,11 @@ namespace LTWindows
                 MessageBox.Show("Hãy chọn bàn!");
                 return;
             }
+            if (dataGridView.Rows.Count <= 1)
+            {
+                MessageBox.Show("Hãy chọn món!");
+                return;
+            }
 
             db.Rows.Clear();
             MessageBox.Show("Order thành công!");
