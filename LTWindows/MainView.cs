@@ -65,5 +65,11 @@ namespace LTWindows
                 i.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
+
+        private void FrmNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanvien a = new();
+            a.Show();
+        }
     }
 }

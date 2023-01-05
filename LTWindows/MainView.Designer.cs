@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button15 = new System.Windows.Forms.Button();
@@ -52,6 +54,7 @@
             this.comboBoxTable = new System.Windows.Forms.ComboBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -60,22 +63,34 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(594, 117);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(33, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(215, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 31);
+            this.label1.Size = new System.Drawing.Size(223, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "FastFood Oder";
+            this.label1.Click += new System.EventHandler(this.FrmNhanVien_Click);
             // 
             // groupBox1
             // 
@@ -105,6 +120,7 @@
             // 
             // button15
             // 
+            this.button15.ForeColor = System.Drawing.Color.Green;
             this.button15.Location = new System.Drawing.Point(336, 140);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(230, 29);
@@ -115,6 +131,7 @@
             // 
             // button8
             // 
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button8.Location = new System.Drawing.Point(178, 140);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(152, 29);
@@ -125,6 +142,7 @@
             // 
             // button4
             // 
+            this.button4.ForeColor = System.Drawing.Color.Red;
             this.button4.Location = new System.Drawing.Point(20, 140);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(152, 29);
@@ -135,6 +153,8 @@
             // 
             // button14
             // 
+            this.button14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button14.ForeColor = System.Drawing.Color.Red;
             this.button14.Location = new System.Drawing.Point(454, 105);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(112, 29);
@@ -145,6 +165,8 @@
             // 
             // button11
             // 
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button11.ForeColor = System.Drawing.Color.Red;
             this.button11.Location = new System.Drawing.Point(336, 105);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(112, 29);
@@ -155,6 +177,7 @@
             // 
             // button7
             // 
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button7.Location = new System.Drawing.Point(178, 105);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(152, 29);
@@ -165,6 +188,7 @@
             // 
             // button3
             // 
+            this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(20, 105);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(152, 29);
@@ -175,6 +199,8 @@
             // 
             // button13
             // 
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button13.ForeColor = System.Drawing.Color.Red;
             this.button13.Location = new System.Drawing.Point(454, 70);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(112, 29);
@@ -185,6 +211,8 @@
             // 
             // button10
             // 
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.Red;
             this.button10.Location = new System.Drawing.Point(336, 70);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(112, 29);
@@ -195,6 +223,7 @@
             // 
             // button6
             // 
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button6.Location = new System.Drawing.Point(178, 70);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(152, 29);
@@ -205,6 +234,8 @@
             // 
             // button12
             // 
+            this.button12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button12.ForeColor = System.Drawing.Color.Red;
             this.button12.Location = new System.Drawing.Point(454, 35);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(112, 29);
@@ -215,6 +246,8 @@
             // 
             // button9
             // 
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button9.ForeColor = System.Drawing.Color.Red;
             this.button9.Location = new System.Drawing.Point(336, 35);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(112, 29);
@@ -225,6 +258,7 @@
             // 
             // button5
             // 
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button5.Location = new System.Drawing.Point(178, 35);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(152, 29);
@@ -235,6 +269,7 @@
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.Color.Red;
             this.button2.Location = new System.Drawing.Point(20, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 29);
@@ -245,6 +280,7 @@
             // 
             // button1
             // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
             this.button1.Location = new System.Drawing.Point(20, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 29);
@@ -255,11 +291,15 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(45, 327);
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.Location = new System.Drawing.Point(25, 327);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(78, 29);
+            this.btnClear.Size = new System.Drawing.Size(98, 35);
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Xóa";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -274,11 +314,13 @@
             // 
             // btnOrder
             // 
+            this.btnOrder.Image = global::LTWindows.Properties.Resources.Button_Ok_icon;
             this.btnOrder.Location = new System.Drawing.Point(475, 327);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(78, 29);
+            this.btnOrder.Size = new System.Drawing.Size(103, 35);
             this.btnOrder.TabIndex = 0;
             this.btnOrder.Text = "Order";
+            this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
@@ -306,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 362);
+            this.dataGridView.Location = new System.Drawing.Point(12, 370);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 29;
@@ -333,6 +375,7 @@
             this.Load += new System.EventHandler(this.MainView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -365,5 +408,6 @@
         private Button btnOrder;
         private ComboBox comboBoxTable;
         private DataGridView dataGridView;
+        private PictureBox pictureBox1;
     }
 }
